@@ -1,0 +1,30 @@
+<div class="eletube-video">
+    <div class="eletube-video-overlay">
+        <img src="{{fullVideoImage}}" lazy alt="" />
+        <div class="eletube-video-overlay-inner">
+            <p>Mit dem Laden des Videos akzeptierst du die Datenschutzerklärung von YouTube.<br>
+                <a href="https://policies.google.com/privacy" target="_blank" rel="nofollow">Mehr erfahren</a>
+            </p>
+            <p>
+                <a class="eletube-unlock-video" href="#" role="button">Video laden</a>
+            </p>
+            <p>
+                <label>
+                    <input class="eletube-always-unlock" type="checkbox" name="unblockAll" value="1" checked="">
+                    <small>YouTube
+                    immer
+                    entsperren</small>
+                </label>
+            </p>
+
+        </div>
+        <div class="eletube-playbutton">
+            <!--i aria-hidden="true" class="fa fas fa-play-circle"></i-->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26">
+                <polygon class="play-btn__svg" points="9.33 6.69 9.33 19.39 19.3 13.04 9.33 6.69"/>
+                <path class="play-btn__svg" d="M26,13A13,13,0,1,1,13,0,13,13,0,0,1,26,13ZM13,2.18A10.89,10.89,0,1,0,23.84,13.06,10.89,10.89,0,0,0,13,2.18Z"/>
+            </svg>
+        </div>
+    </div>
+    <iframe class="eletube-video-iframe" src="about:blank" data-src="{{videoUrl}}"></iframe>
+</div>

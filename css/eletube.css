@@ -1,0 +1,171 @@
+
+.eletube-video {
+  position: relative;
+  padding-top: 56%;
+  height: 0;
+  margin-bottom: 1.5em;
+}
+
+.eletube-video img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.eletube-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+}
+
+.eletube-video-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+}
+
+.eletube-video-overlay-inner {
+  position: absolute;
+  padding: 20px 20px 20px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #eee;
+  max-height: 100%;
+  overflow: auto;
+  z-index: 30;
+}
+
+.eletube-video a.eletube-unlock-video {
+  border-radius: 10px;
+  padding: 7px 15px;
+  background-color: #ddd;
+  color: #333;
+}
+
+.eletube-playbutton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 30;
+}
+
+.eletube-playbutton svg {
+  fill: #eee;
+  width: 60px;
+}
+
+.eletube-item {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.eletube-item.current .eletube-item-image {
+  border: 1px solid var(--e-global-color-accent);
+}
+
+.eletube-item-image {
+  position: relative;
+  padding-top: 75%;
+  height: 0;
+}
+
+.eletube-item-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  max-width: 100%;
+  height: auto;
+}
+
+.eletube-item-image .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: var(--overlay-mix-blend-mode);
+  transition-duration: 0.8s;
+  transition-property: mix-blend-mode, transform, opacity, background-color, -webkit-transform;
+  z-index: 10;
+}
+
+.eletube-item:hover .eletube-item-image .inner {
+  background-color: #FFFFFF26;
+}
+
+.eletube-item-title {
+  position: relative;
+  text-align: center;
+  margin-top: 0.25em;
+}
+
+.eletube-item .eletube-playbutton {
+  font-size: 40px;
+  margin-top: -15px;
+  z-index: 20;
+}
+
+.eletube-item .eletube-playbutton svg {
+  width: 40px;
+}
+
+.eletube-item-description {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #eee;
+  text-align: left;
+  z-index: 50;
+  font-size: 0.7rem;
+  line-height: 1.7em;
+  opacity: 0;
+  transition: opacity 0.4s linear;
+  pointer-events: none;
+}
+
+.eletube-item:hover .eletube-item-description {
+  opacity: 1;
+}
+
+.eletube-always-unlock {
+  filter: grayscale(1);
+}
+
+@media (min-width: 480px) {
+  .eletube-item-list {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 720px) {
+  .eletube-item-list {
+    column-count: 3;
+  }
+}
+
+@media (min-width: 960px) {
+  .eletube-item-list {
+    column-count: 4;
+  }
+}
