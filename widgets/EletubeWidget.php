@@ -13,7 +13,7 @@ if ( !defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-class EletubeWidget extends \Elementor\Widget_Base {
+final class EletubeWidget extends \Elementor\Widget_Base {
 
     public function get_name() {
         return 'eletube';

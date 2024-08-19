@@ -19,10 +19,10 @@ namespace Eletube;
  * Plugin URI:
  * Description:       Eletube adds a Widget for Youtube-Lists to Elementor.
  * Version:           1.0.0
- * Author:            RTO GmbH
- * Author URI:        https://www.rto.de
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Author:            Sascha Hennemann
+ * Author URI:        https://www.hennewelt.de
+ * License:           MIT License
+ * License URI:       https://opensource.org/license/mit
  * Text Domain:       eletube
  * Domain Path:       /languages
  */
@@ -40,7 +40,7 @@ define( 'Eletube_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 define( 'Eletube_CACHE_DIR', wp_upload_dir()['basedir'] . '/eletube-cache' );
 
 
-class Eletube {
+final class Eletube {
     private function __construct() {
 
         if ( !is_dir( Eletube_CACHE_DIR ) ) {
@@ -63,7 +63,6 @@ class Eletube {
     public function registerScriptsAndStyle() {
         wp_enqueue_script( 'eletube-js', Eletube_URL . '/js/eletube.js' );
         wp_enqueue_style( 'eletube-css', Eletube_URL . '/css/eletube.css' );
-        #wp_enqueue_style( 'font-awesome' );
     }
 
     public static function run() {
